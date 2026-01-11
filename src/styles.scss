@@ -1,12 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    font-family: "Inter", sans-serif;
+    font-family: "Google Sans Code", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    background-color: #26262E;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    transition: color 0.1s ease-in-out;
+
+    &.active {
+        color: #8d65ff;
+    }
+}
+
+a:hover {
+    cursor: pointer;
+    color: #8d65ff;
+}
+
+// Underline for links
+a::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background: #8d65ff;
+    transition: 300ms;
+}
+
+a:hover::after {
+    width: 100%;
 }

@@ -1,0 +1,25 @@
+.content {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        justify-content: center;
+    }
+}
+
+.paragraph-container {
+    flex: 2;
+}
