@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "home": "HOME",
+        "cv": "CV",
+        "blog": "BLOG",
+        "projects": "PROJECTS",
+        "contact": "CONTACT"
+    },
+    "home": {
+        "title": "Hi, I'm Simon!",
+        "paragraph-1": "I'm a self-taught software engineer currently balancing a professional part-time role while completing my Bachelor's degree in Computer Science. I love building web apps to improve the life of everybody.",
+        "paragraph-2": "Check out my blog to read about what I've been up to lately or head over to GitHub to check out my latest projects. I'm always happy to collaborate!",
+        "paragraph-3": "Are you a recruiter? You can view my CV in the top navbar.",
+        "paragraph-4": "Want to chat? Feel free to reach out via the contact section."
+    }
+}

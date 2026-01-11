@@ -49,3 +49,26 @@ a::after {
 a:hover::after {
     width: 100%;
 }
+
+button {
+    font-family: inherit;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: inherit;
+
+    border: solid 3px transparent;
+    border-radius: 8px;
+    background: none;
+    color: inherit;
+
+    cursor: pointer;
+
+    transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    padding: 4px 8px;
+}
+
+button:hover {
+    color: #8d65ff;
+    border-color: #8d65ff;
+}
