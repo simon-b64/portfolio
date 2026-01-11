@@ -1,38 +1,48 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, inject, Input, numberAttribute } from '@angular/core';
 import { NgStyle } from '@angular/common';
+import { ThemeStore } from '../../store/theme.store';
 
 @Component({
     selector: 'app-logo',
     imports: [
-        NgStyle
+        NgStyle,
     ],
     templateUrl: './logo.html',
-    styleUrl: './logo.scss',
+    styleUrl: './logo.css',
 })
 export class Logo {
-    public scale = input<number>(1);
-    public strokeWidth = input<number>(6);
+    @Input({ transform: numberAttribute }) scale: number | undefined;
+    @Input() color: string | undefined;
+    @Input({ transform: numberAttribute }) strokeWidth: number | undefined;
 
-    private readonly baseWidth = 930;
-    private readonly baseHeight = 832;
+    private readonly themeStore = inject(ThemeStore);
 
-    scaleStyle = computed(() => {
-        const scale = this.scale() ?? 1;
-        const sw = this.strokeWidth();
-        const width = (this.baseWidth + sw) * scale;
-        const height = (this.baseHeight + sw) * scale;
+    get effectiveStrokeWidth() {
+        return this.strokeWidth ?? 6;
+    }
 
+    get effectiveViewBox() {
+        const padding = (this.strokeWidth ?? 6) / 2;
+        const width = 930 + (this.strokeWidth ?? 6);
+        const height = 832 + (this.strokeWidth ?? 6);
+        return `-${ padding } -${ padding } ${ width } ${ height }`;
+    }
+
+    get effectiveColor() {
+        if (this.color !== undefined) {
+            return this.color;
+        }
+
+        return this.themeStore.theme() === 'dark' ? '#ffffff' : '#000000';
+    }
+
+    get scaleStyle() {
+        const scale = this.scale ?? 1;
         return {
-            width: `${ width }px`,
-            height: `${ height }px`,
+            transform: `scale(${ scale })`,
+            width: '100%',
+            height: 'auto',
             display: 'block',
         };
-    });
-
-    effectiveViewBox = computed(() => {
-        const padding = this.strokeWidth() / 2;
-        const width = this.baseWidth + this.strokeWidth();
-        const height = this.baseHeight + this.strokeWidth();
-        return `-${ padding } -${ padding } ${ width } ${ height }`;
-    });
+    }
 }

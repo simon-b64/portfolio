@@ -1,21 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './components/navbar/navbar';
-import { TranslateService } from '@ngx-translate/core';
+import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
 
 @Component({
-    selector: 'app-root',
-    imports: [RouterOutlet, Navbar],
-    templateUrl: './app.html',
-    styleUrl: './app.scss'
+  selector: 'app-root',
+    imports: [RouterOutlet, Header, Footer],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-    private translateService = inject(TranslateService);
-
-    constructor() {
-        this.translateService.addLangs(['de', 'en']);
-        this.translateService.setFallbackLang('en');
-        this.translateService.use('en');
-    }
-
+  protected title = 'PersonalWebsite';
 }

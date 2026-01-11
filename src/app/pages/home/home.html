@@ -1,0 +1,105 @@
+<section class="hero bg-base-200 min-h-screen">
+    <div class="hero-content text-center">
+        <div class="flex flex-col gap-8 justify-center items-center w-full px-4 sm:gap-10">
+            <div class="w-48 h-48 sm:w-64 sm:h-64 flex items-center justify-center">
+                <app-logo strokeWidth="20"/>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-widest break-words text-balance">
+                Simon Buchinger
+            </h1>
+            <p class="text-base sm:text-xl py-4 sm:py-6 tracking-wider max-w-xl">
+                Kreativer Softwareentwickler mit einer Leidenschaft für innovative Lösungen.
+            </p>
+            <a href="#about"
+               class="flex flex-col gap-1 sm:gap-2 items-center text-base sm:text-lg transition-transform duration-200 hover:scale-110 cursor-pointer">
+                <fa-icon [icon]="anglesDown" size="2xl"></fa-icon>
+                Read more
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="flex flex-col lg:flex-row items-center justify-center min-h-[55vh] gap-8 md:gap-16 px-6 w-full mx-auto py-10">
+    <div class="text-center md:text-left max-w-xl xl:max-w-3xl">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-widest text-primary drop-shadow-lg mb-4">Über mich</h2>
+        <p class="text-base sm:text-lg mb-4">
+            <span class="font-bold">Leidenschaftlicher Programmierer und autodidaktischer Ingenieur</span>, ausgebildet
+            in angewandter Technik, hardwarenaher Programmierung, Schaltungsdesign sowie mit beruflicher Erfahrung in
+            der Software- und Webentwicklung.
+        </p>
+        <p class="text-base sm:text-lg mb-4">
+            Schon während meiner Kindheit konnte ich die rasante Entwicklung des Technologiesektors miterleben. Meine
+            Mission ist es, diesen stetigen Wandel aktiv mitzugestalten und jedem Menschen den Zugang zu Technologie als
+            Informations- und Kommunikationsmittel so einfach wie möglich zu machen. Darüber hinaus möchte ich die Welt
+            bei der Erforschung neuer Innovationen im Bereich Computer- und Softwaretechnik unterstützen, um die Grenzen
+            des bestehenden Systems kontinuierlich zu erweitern.
+        </p>
+        <p class="text-base sm:text-lg">
+            Im Sinne dieser Mission studiere ich derzeit <span class="font-bold">Informatik</span> an der <span
+            class="font-bold">TU Wien</span>, um meine Fähigkeiten – zusätzlich zu meinem bereits sehr breiten
+            Kompetenzspektrum – weiter auszubauen.
+        </p>
+    </div>
+    <img
+        ngSrc="title_picture.jpg"
+        width="448"
+        height="600"
+        alt="Portrait"
+        class="w-full max-w-xs md:max-w-md rounded-lg shadow-lg"
+        priority
+    />
+</section>
+
+<section id="experience" class="flex flex-col items-center justify-center min-h-[25vh] gap-8 px-4 w-full mx-auto py-10 bg-base-200">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-widest text-primary drop-shadow-lg mb-6">Erfahrung & Erfolge</h2>
+    <div class="flex flex-col sm:flex-row gap-8 sm:gap-16 text-center">
+        <div>
+            <span class="text-5xl font-extrabold text-primary">9</span>
+            <div class="text-base sm:text-lg mt-2">Jahre in der Entwicklung</div>
+        </div>
+        <div>
+            <span class="text-5xl font-extrabold text-primary">4</span>
+            <div class="text-base sm:text-lg mt-2">Jahre professionelle Erfahrung</div>
+        </div>
+        <div>
+            <span class="text-5xl font-extrabold text-primary">20+</span>
+            <div class="text-base sm:text-lg mt-2">abgeschlossene Projekte</div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="flex flex-col items-center justify-center min-h-[30vh] gap-10 px-4 w-full mx-auto py-10 rounded-3xl">
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 tracking-widest text-primary drop-shadow-lg">
+        Meine Stärken
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl text-center">
+        <div class="rounded-2xl shadow-lg p-8 border-2 border-primary/10 hover:scale-105 transition-transform duration-300 flex flex-col items-center bg-base-200">
+            <fa-icon [icon]="faLightBulb" class="text-primary text-4xl mb-4"></fa-icon>
+            <h3 class="text-2xl font-bold mb-2 text-primary drop-shadow">Kreativität</h3>
+            <p class="text-base sm:text-lg">
+                Innovative Lösungsansätze und ein Gespür für Design – ich bringe frische Ideen in jedes Projekt ein.
+            </p>
+        </div>
+        <div class="rounded-2xl shadow-lg p-8 border-2 border-primary/10 hover:scale-105 transition-transform duration-300 flex flex-col items-center bg-base-200">
+            <fa-icon [icon]="faSearch" class="text-primary text-4xl mb-4"></fa-icon>
+            <h3 class="text-2xl font-bold mb-2 text-primary drop-shadow">Analytisches Denken</h3>
+            <p class="text-base sm:text-lg">
+                Komplexe Probleme werden von mir strukturiert analysiert und effizient gelöst – von der Hardware bis zur Software.
+            </p>
+        </div>
+        <div class="rounded-2xl shadow-lg p-8 border-2 border-primary/10 hover:scale-105 transition-transform duration-300 flex flex-col items-center bg-base-200">
+            <fa-icon [icon]="faUsers" class="text-primary text-4xl mb-4"></fa-icon>
+            <h3 class="text-2xl font-bold mb-2 text-primary drop-shadow">Teamfähigkeit</h3>
+            <p class="text-base sm:text-lg">
+                Durch offene Kommunikation und Engagement sorge ich für ein produktives und motiviertes Arbeitsumfeld.
+            </p>
+        </div>
+        <div class="rounded-2xl shadow-lg p-8 border-2 border-primary/10 hover:scale-105 transition-transform duration-300 flex flex-col items-center bg-base-200">
+            <fa-icon [icon]="faSmile" class="text-primary text-4xl mb-4"></fa-icon>
+            <h3 class="text-2xl font-bold mb-2 text-primary drop-shadow">Kundenorientierung</h3>
+            <p class="text-base sm:text-lg">
+                Mein Ziel ist es immer, das Beste für den Kunden zu erreichen und individuelle Anforderungen optimal umzusetzen.
+            </p>
+        </div>
+    </div>
+</section>

@@ -1,15 +1,19 @@
 import { Routes } from '@angular/router';
-import { HomeView } from './view/home/home';
-import { NotFoundView } from './view/not-found/not-found';
+import { HomePage } from './pages/home/home';
+import { NotFoundPage } from './pages/not-found/not-found';
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: HomeView
+        component: HomePage
+    },
+    {
+        path: 'not-found',
+        component: NotFoundPage
     },
     {
         path: '**',
-        component: NotFoundView
+        redirectTo: '/not-found'
     }
 ];

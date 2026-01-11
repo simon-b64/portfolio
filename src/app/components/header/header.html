@@ -1,0 +1,15 @@
+<header>
+    <nav class="container mx-auto absolute top-0 left-0 right-0 flex justify-end items-center p-4">
+        <label for="theme-toggle" class="flex cursor-pointer gap-2">
+            <fa-icon [icon]="faSun" size="xl"/>
+            <input
+                id="theme-toggle"
+                type="checkbox"
+                class="toggle"
+                [checked]="themeStore.theme() === 'dark'"
+                (change)="themeStore.toggleTheme()"
+            />
+            <fa-icon [icon]="faMoon" size="xl"/>
+        </label>
+    </nav>
+</header>
