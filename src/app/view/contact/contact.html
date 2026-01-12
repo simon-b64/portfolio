@@ -1,4 +1,4 @@
-<h1>{{ "contact.title" | translate }}</h1>
+<h1><fa-icon [icon]="faAddressBook" /> {{ "contact.title" | translate }}</h1>
 <p [innerHTML]="'contact.paragraph-1' | translate"></p>
 <form (submit)="submitForm($event)" aria-label="Contact form">
     <label for="contact-name" class="visually-hidden">{{ "contact.form.name" | translate }}</label>

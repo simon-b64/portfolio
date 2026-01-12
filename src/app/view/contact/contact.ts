@@ -3,6 +3,8 @@ import { form, FormField, maxLength, required } from '@angular/forms/signals';
 import { NgClass } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { faAddressBook, faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 
 interface ContactData {
     name: string;
@@ -15,12 +17,15 @@ interface ContactData {
     imports: [
         FormField,
         NgClass,
-        TranslatePipe
+        TranslatePipe,
+        FaIconComponent
     ],
     templateUrl: './contact.html',
     styleUrl: './contact.scss',
 })
 export class ContactView {
+    protected readonly faAddressBook = faAddressBook;
+
     private http = inject(HttpClient);
     private translate = inject(TranslateService);
 
