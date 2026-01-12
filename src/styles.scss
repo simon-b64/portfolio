@@ -66,9 +66,58 @@ button {
 
     transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
     padding: 4px 8px;
+
+    &.disabled,
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        color: #9a99a3;
+        border-color: transparent;
+        pointer-events: none;
+    }
+
+    &:not(:disabled):not(.disabled):hover {
+        color: #8d65ff;
+        border-color: #8d65ff;
+    }
+
 }
 
-button:hover {
-    color: #8d65ff;
+input, textarea {
+    font-family: inherit;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: inherit;
+
+    border: solid 2px #55555F;
+    border-radius: 8px;
+    background: #1E1E24;
+    color: inherit;
+
+    padding: 8px;
+
+    transition: border-color 0.1s ease-in-out;
+
+    &.invalid {
+        border-color: #FF5C5C;
+    }
+}
+
+input:focus, input:hover, textarea:focus, textarea:hover {
+    outline: none;
     border-color: #8d65ff;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+

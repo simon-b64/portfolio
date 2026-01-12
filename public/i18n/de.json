@@ -12,5 +12,31 @@
         "paragraph-2": "In meinem Blog schreibe ich über meine aktuellen Schwerpunkte, und auf GitHub findest du meine neuesten Projekte. Ich bin immer offen für spannende Zusammenarbeit!",
         "paragraph-3": "Sie sind Recruiter? Meinen Lebenslauf finden Sie direkt oben in der Navbar.",
         "paragraph-4": "Lust auf einen Reden? Kontaktiere mich gerne über mein Kontaktformular!"
+    },
+    "contact": {
+        "title": "Kontakt aufnehmen",
+        "paragraph-1": "Hast du Lust mit mir zusammenzuarbeiten oder brauchst meine Meinung zu einem Problem?<br>Schreib mir einfach über das Kontaktformular hier unten und ich schreib dir so bald wie möglich zurück!",
+        "form": {
+            "name": "Dein Name",
+            "email": "Deine E-Mail",
+            "message": "Deine Nachricht",
+            "submit": "Nachricht senden"
+        },
+        "error": {
+            "name": {
+                "required": "Bitte gib deinen Namen an.",
+                "maxLength": "Dein Name darf maximal 50 Zeichen lang sein."
+            },
+            "email": {
+                "required": "Bitte gib deine E-Mail an.",
+                "maxLength": "Deine E-Mail darf maximal 100 Zeichen lang sein."
+            },
+            "message": {
+                "required": "Bitte gib eine Nachricht ein.",
+                "maxLength": "Deine Nachricht darf maximal 500 Zeichen lang sein."
+            }
+        },
+        "success": "Formular erfolgreich abgeschickt.",
+        "failed": "Absenden fehlgeschlagen. Bitte versuche es später erneut."
     }
 }
