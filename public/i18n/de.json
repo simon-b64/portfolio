@@ -36,7 +36,7 @@
                 "maxLength": "Deine Nachricht darf maximal 500 Zeichen lang sein."
             }
         },
-        "success": "Formular erfolgreich abgeschickt.",
+        "success": "Danke für deine Nachricht. Sie wurde erfolgreich versendet.",
         "failed": "Absenden fehlgeschlagen. Bitte versuche es später erneut."
     }
 }

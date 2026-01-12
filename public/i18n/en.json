@@ -36,7 +36,7 @@
                 "maxLength": "Message cannot exceed 500 characters."
             }
         },
-        "success": "Form submitted successfully.",
+        "success": "Thank you for reaching out. Your message has been sent successfully.",
         "failed": "Submission failed. Please try again later."
     }
 }
