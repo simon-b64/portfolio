@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
     color: inherit;
 
     transition: color 0.1s ease-in-out;
@@ -31,13 +35,12 @@ a {
     }
 }
 
-a:hover {
+.link:hover {
     cursor: pointer;
     color: #8d65ff;
 }
 
-// Underline for links
-a::after {
+.link::after {
     content: '';
     width: 0;
     height: 1px;
@@ -46,11 +49,11 @@ a::after {
     transition: 300ms;
 }
 
-a:hover::after {
+.link:hover::after {
     width: 100%;
 }
 
-button {
+.btn {
     font-family: inherit;
     font-optical-sizing: auto;
     font-weight: 400;

@@ -26,7 +26,7 @@
         [formField]="contactForm.message"
     >
     </textarea>
-    <button type="submit" [disabled]="contactForm().invalid()" aria-label="Send message">
+    <button class="btn" type="submit" [disabled]="contactForm().invalid()" aria-label="Send message">
         {{ "contact.form.submit" | translate }}
     </button>
     @if (message()) {
