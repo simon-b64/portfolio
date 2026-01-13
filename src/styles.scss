@@ -67,6 +67,10 @@ button {
     transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
     padding: 4px 8px;
 
+    &.filled {
+        background: #684bbc;
+    }
+
     &.disabled,
     &:disabled {
         cursor: not-allowed;
@@ -79,6 +83,10 @@ button {
     &:not(:disabled):not(.disabled):hover {
         color: #8d65ff;
         border-color: #8d65ff;
+
+        &.filled {
+            color: #FFFFFF;
+        }
     }
 
 }

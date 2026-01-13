@@ -1,2 +1,20 @@
-<h1><fa-icon [icon]="faPenToSquare" /> Blog</h1>
+<h1>
+    <fa-icon [icon]="faPenToSquare"/>
+    Blog
+</h1>
 
+<div class="blog-posts">
+    @for (post of blogPost(); track post.title) {
+        <article class="blog-post">
+            <fa-icon [icon]="post.icon" size="5x"/>
+            <div class="blog-post-content">
+                <div class="headline">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.date | date }}</p>
+                </div>
+                <p class="content">{{ post.content }}</p>
+                <button class="filled">Read more</button>
+            </div>
+        </article>
+    }
+</div>

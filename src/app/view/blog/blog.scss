@@ -1,1 +1,35 @@
+.blog-post {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
 
+    border-bottom: 1px solid #e0e0e0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.blog-post-content {
+    flex-grow: 1;
+
+    .headline {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        margin-top: 0;
+    }
+
+    button {
+        float: right;
+    }
+}
