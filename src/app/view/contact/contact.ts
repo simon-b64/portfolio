@@ -1,10 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
-import { form, FormField, maxLength, required } from '@angular/forms/signals';
+import { email, form, FormField, maxLength, required } from '@angular/forms/signals';
 import { NgClass } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { faAddressBook, faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faAddressBook } from '@fortawesome/free-regular-svg-icons';
 
 interface ContactData {
     name: string;
@@ -39,6 +39,7 @@ export class ContactView {
         required(schemaModel.name, {message: this.translate.instant('contact.error.name.required')})
         maxLength(schemaModel.name, 50, {message: this.translate.instant('contact.error.name.maxLength')})
         required(schemaModel.email, {message: this.translate.instant('contact.error.email.required')})
+        email(schemaModel.email, {message: this.translate.instant('contact.error.email.emailFormat')})
         maxLength(schemaModel.email, 100, {message: this.translate.instant('contact.error.email.maxLength')})
         required(schemaModel.message, {message: this.translate.instant('contact.error.message.required')})
         maxLength(schemaModel.message, 500, {message: this.translate.instant('contact.error.message.maxLength')})

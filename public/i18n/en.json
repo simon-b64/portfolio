@@ -29,6 +29,7 @@
             },
             "email": {
                 "required": "Email is required.",
+                "emailFormat": "Please enter a valid email address.",
                 "maxLength": "Email cannot exceed 100 characters."
             },
             "message": {

@@ -1,4 +1,7 @@
-<h1><fa-icon [icon]="faAddressBook" /> {{ "contact.title" | translate }}</h1>
+<h1>
+    <fa-icon [icon]="faAddressBook"/>
+    {{ "contact.title" | translate }}
+</h1>
 <p [innerHTML]="'contact.paragraph-1' | translate"></p>
 <form (submit)="submitForm($event)" aria-label="Contact form">
     <label for="contact-name" class="visually-hidden">{{ "contact.form.name" | translate }}</label>
@@ -7,9 +10,6 @@
         type="text"
         [placeholder]="'contact.form.name' | translate"
         [formField]="contactForm.name"
-        [ngClass]="{invalid: contactForm.name().touched() && contactForm.name().invalid()}"
-        aria-required="true"
-        [attr.aria-invalid]="contactForm.name().touched() && contactForm.name().invalid()"
     >
     <label for="contact-email" class="visually-hidden">{{ "contact.form.email" | translate }}</label>
     <input
@@ -17,9 +17,6 @@
         type="email"
         [placeholder]="'contact.form.email' | translate"
         [formField]="contactForm.email"
-        [ngClass]="{invalid: contactForm.email().touched() && contactForm.email().invalid()}"
-        aria-required="true"
-        [attr.aria-invalid]="contactForm.email().touched() && contactForm.email().invalid()"
     >
     <label for="contact-message" class="visually-hidden">{{ "contact.form.message" | translate }}</label>
     <textarea
@@ -27,9 +24,6 @@
         [placeholder]="'contact.form.message' | translate"
         rows="3"
         [formField]="contactForm.message"
-        [ngClass]="{invalid: contactForm.message().touched() && contactForm.message().invalid()}"
-        aria-required="true"
-        [attr.aria-invalid]="contactForm.message().touched() && contactForm.message().invalid()"
     >
     </textarea>
     <button type="submit" [disabled]="contactForm().invalid()" aria-label="Send message">
@@ -37,7 +31,9 @@
     </button>
     @if (message()) {
         <div class="message"
-             [ngClass]="{'success': message() === ('contact.success' | translate), 'error': message() === ('contact.failed' | translate)}"
+             [ngClass]="{
+             'success': message() === ('contact.success' | translate),
+             'error': message() === ('contact.failed' | translate)}"
         >
             {{ message() }}
         </div>

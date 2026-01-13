@@ -29,6 +29,7 @@
             },
             "email": {
                 "required": "Bitte gib deine E-Mail an.",
+                "emailFormat": "Bitte gib eine gültige E-Mail-Adresse ein.",
                 "maxLength": "Deine E-Mail darf maximal 100 Zeichen lang sein."
             },
             "message": {
