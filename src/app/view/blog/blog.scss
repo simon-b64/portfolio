@@ -11,6 +11,16 @@
     &:last-child {
         border-bottom: none;
     }
+
+    .blog-post-icon {
+        width: 7em;
+        height: 7em;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 }
 
 .blog-post-content {
