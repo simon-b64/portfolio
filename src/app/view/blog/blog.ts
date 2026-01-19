@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 interface BlogPost {
     id: string;
@@ -23,23 +24,33 @@ interface BlogPost {
     templateUrl: './blog.html',
     styleUrl: './blog.scss',
 })
-export class BlogView {
+export class BlogView implements OnInit {
     protected readonly faPenToSquare = faPenToSquare;
+    protected readonly blogPosts = signal<BlogPost[]>([]);
 
-    protected blogPost  = signal<BlogPost[]>([
-        {
-            id: '2',
-            icon: '/assets/icons/circle-nodes.svg',
-            title: 'Personal Website 2026',
-            date: new Date(),
-            content: 'This year I decided to start the tradition of reworking my personal website every year. Whilst implementing this I wanted to start using newer technologies and using the new angular 21 features. I have also decided to use a blog format to document my journey throughout the year.'
-        },
-        {
-            id: '1',
-            icon: '/assets/icons/circle-nodes.svg',
-            title: 'First example blog post',
-            date: new Date(),
-            content: 'This is the content of the second blog post.'
-        }
-    ]);
+    private readonly entries = [
+        "2026_01_19"
+    ];
+
+    constructor(
+        private httpClient: HttpClient
+    ) {
+    }
+
+    ngOnInit(): void {
+        this.entries.forEach(entry => {
+            this.httpClient.get(`/blog/${entry}/entry.json`).subscribe((data: any) => {
+                this.blogPosts.update(posts => [
+                    ...posts,
+                    {
+                        id: entry,
+                        icon: data.preview_image,
+                        title: data.title,
+                        date: new Date(data.date),
+                        content: data.preview
+                    }
+                ]);
+            });
+        });
+    }
 }

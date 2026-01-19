@@ -4,7 +4,7 @@
 </h1>
 
 <div class="blog-posts">
-    @for (post of blogPost(); track post.title) {
+    @for (post of blogPosts(); track post.title) {
         <article class="blog-post">
             <img [ngSrc]="post.icon" class="blog-post-icon" width="80" height="80" priority alt=""/>
             <div class="blog-post-content">
@@ -18,7 +18,7 @@
         </article>
     }
 
-    @if (blogPost().length === 0) {
+    @if (blogPosts().length === 0) {
         <p>No blog posts available.</p>
     }
 </div>
