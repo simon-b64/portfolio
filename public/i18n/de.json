@@ -44,5 +44,78 @@
         "title": "[O.o]",
         "message-1": "Oh nein! Die Seite, die du gesucht hast, ist nicht hier :(",
         "message-2": "Vielleicht woanders suchen?"
+    },
+    "cv": {
+        "header": {
+            "name": "Simon Buchinger",
+            "location": "Wien, Österreich",
+            "contact-note": "Für Anfragen bitte den Kontaktbereich nutzen.",
+            "cta": {
+                "contact": "Kontakt aufnehmen",
+                "github": "GitHub",
+                "linkedin": "LinkedIn"
+            }
+        },
+        "experience": {
+            "title": "Erfahrung",
+            "cloudflight": {
+                "title": "Software Engineer, Cloudflight",
+                "subtitle": "Vollzeit und Teilzeit während des Studiums",
+                "dates": "Sep 2022 - Heute",
+                "detail-1": "Softwareentwicklung in mehreren Projekten."
+            },
+            "cloudflight-intern": {
+                "title": "Software Engineer Praktikum, Cloudflight",
+                "dates": "Jun 2022 - Aug 2022",
+                "detail-1": "Praktikum mit Fokus auf Softwareentwicklung."
+            },
+            "civil": {
+                "title": "Zivildienst",
+                "dates": "Sep 2021 - Mai 2022",
+                "detail-1": "Absolvierter Zivildienst."
+            },
+            "drei": {
+                "title": "IT Operations Engineer Praktikum, Drei Österreich",
+                "dates": "Aug 2021",
+                "detail-1": "Unterstützung von IT-Operations und Infrastruktur-Workflows."
+            }
+        },
+        "education": {
+            "title": "Ausbildung",
+            "tuwien": {
+                "title": "BSc Software- und Information Engineering",
+                "subtitle": "Technische Universität Wien",
+                "dates": "2022 - Heute"
+            },
+            "tgm": {
+                "title": "Matura, TGM HTL Wien",
+                "dates": "2021"
+            }
+        },
+        "projects": {
+            "title": "Projekte",
+            "detail-1": "Für große österreichische Kunden in Logistik und öffentlichem Sektor gearbeitet.",
+            "detail-2": "Private Projekte auf GitHub verfügbar."
+        },
+        "skills": {
+            "title": "Skills",
+            "role": "Full-Stack Software Engineer",
+            "frontend": {
+                "label": "Berufliche Erfahrung (Frontend):",
+                "value": "Vue, Svelte, Angular"
+            },
+            "backend": {
+                "label": "Berufliche Erfahrung (Backend):",
+                "value": "Java, Spring Boot, Quarkus"
+            },
+            "general": {
+                "label": "Außerdem gearbeitet mit:",
+                "value": "Java, Kotlin, Python, Spring Boot, Vue, Angular, Svelte, C"
+            },
+            "devops": {
+                "label": "DevOps:",
+                "value": "Self-Hosting, Docker, Kubernetes"
+            }
+        }
     }
 }

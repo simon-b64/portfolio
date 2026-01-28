@@ -3,6 +3,7 @@ import { HomeView } from './view/home/home';
 import { NotFoundView } from './view/not-found/not-found';
 import { BlogView } from './view/blog/blog';
 import { ContactView } from './view/contact/contact';
+import { CvView } from './view/cv/cv';
 
 export const routes: Routes = [
     {
@@ -10,6 +11,11 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: HomeView
+    },
+    {
+        title: 'CV | Simon Buchinger',
+        path: 'cv',
+        component: CvView
     },
     {
         path: 'blog',

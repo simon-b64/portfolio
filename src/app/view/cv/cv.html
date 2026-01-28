@@ -1,0 +1,112 @@
+<div class="cv">
+    <header class="cv-header">
+        <div class="intro">
+            <h1>{{ 'cv.header.name' | translate }}</h1>
+            <p class="location">{{ 'cv.header.location' | translate }}</p>
+            <p class="contact-note">{{ 'cv.header.contact-note' | translate }}</p>
+        </div>
+        <div class="cta">
+            <a class="btn filled" routerLink="/contact">{{ 'cv.header.cta.contact' | translate }}</a>
+            <a class="btn" href="https://github.com/simon-b64" target="_blank" rel="noopener noreferrer">{{ 'cv.header.cta.github' | translate }}</a>
+            <a class="btn" href="https://www.linkedin.com/in/simon-buchinger/" target="_blank" rel="noopener noreferrer">{{ 'cv.header.cta.linkedin' | translate }}</a>
+        </div>
+    </header>
+
+    <section class="cv-section">
+        <h2>{{ 'cv.experience.title' | translate }}</h2>
+        <div class="cv-timeline">
+            <article class="cv-entry">
+                <div class="cv-entry-header">
+                    <div>
+                        <div class="cv-entry-title">{{ 'cv.experience.cloudflight.title' | translate }}</div>
+                        <div class="cv-entry-subtitle">{{ 'cv.experience.cloudflight.subtitle' | translate }}</div>
+                    </div>
+                    <div class="cv-entry-meta">{{ 'cv.experience.cloudflight.dates' | translate }}</div>
+                </div>
+                <ul>
+                    <li>{{ 'cv.experience.cloudflight.detail-1' | translate }}</li>
+                </ul>
+            </article>
+            <article class="cv-entry">
+                <div class="cv-entry-header">
+                    <div>
+                        <div class="cv-entry-title">{{ 'cv.experience.cloudflight-intern.title' | translate }}</div>
+                    </div>
+                    <div class="cv-entry-meta">{{ 'cv.experience.cloudflight-intern.dates' | translate }}</div>
+                </div>
+                <ul>
+                    <li>{{ 'cv.experience.cloudflight-intern.detail-1' | translate }}</li>
+                </ul>
+            </article>
+            <article class="cv-entry">
+                <div class="cv-entry-header">
+                    <div>
+                        <div class="cv-entry-title">{{ 'cv.experience.civil.title' | translate }}</div>
+                    </div>
+                    <div class="cv-entry-meta">{{ 'cv.experience.civil.dates' | translate }}</div>
+                </div>
+                <ul>
+                    <li>{{ 'cv.experience.civil.detail-1' | translate }}</li>
+                </ul>
+            </article>
+            <article class="cv-entry">
+                <div class="cv-entry-header">
+                    <div>
+                        <div class="cv-entry-title">{{ 'cv.experience.drei.title' | translate }}</div>
+                    </div>
+                    <div class="cv-entry-meta">{{ 'cv.experience.drei.dates' | translate }}</div>
+                </div>
+                <ul>
+                    <li>{{ 'cv.experience.drei.detail-1' | translate }}</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="cv-section">
+        <h2>{{ 'cv.education.title' | translate }}</h2>
+        <div class="cv-timeline">
+            <article class="cv-entry">
+                <div class="cv-entry-header">
+                    <div>
+                        <div class="cv-entry-title">{{ 'cv.education.tuwien.title' | translate }}</div>
+                        <div class="cv-entry-subtitle">{{ 'cv.education.tuwien.subtitle' | translate }}</div>
+                    </div>
+                    <div class="cv-entry-meta">{{ 'cv.education.tuwien.dates' | translate }}</div>
+                </div>
+            </article>
+            <article class="cv-entry">
+                <div class="cv-entry-header">
+                    <div>
+                        <div class="cv-entry-title">{{ 'cv.education.tgm.title' | translate }}</div>
+                    </div>
+                    <div class="cv-entry-meta">{{ 'cv.education.tgm.dates' | translate }}</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="cv-section">
+        <h2>{{ 'cv.projects.title' | translate }}</h2>
+        <div class="cv-entry">
+            <ul>
+                <li>{{ 'cv.projects.detail-1' | translate }}</li>
+                <li>{{ 'cv.projects.detail-2' | translate }}</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cv-section">
+        <h2>{{ 'cv.skills.title' | translate }}</h2>
+        <div class="cv-entry">
+            <div class="cv-entry-title">{{ 'cv.skills.role' | translate }}</div>
+            <ul>
+                <li><strong>{{ 'cv.skills.frontend.label' | translate }}</strong> {{ 'cv.skills.frontend.value' | translate }}</li>
+                <li><strong>{{ 'cv.skills.backend.label' | translate }}</strong> {{ 'cv.skills.backend.value' | translate }}</li>
+                <li><strong>{{ 'cv.skills.general.label' | translate }}</strong> {{ 'cv.skills.general.value' | translate }}</li>
+                <li><strong>{{ 'cv.skills.devops.label' | translate }}</strong> {{ 'cv.skills.devops.value' | translate }}</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
