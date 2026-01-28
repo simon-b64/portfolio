@@ -39,5 +39,10 @@
         },
         "success": "Danke für deine Nachricht. Sie wurde erfolgreich versendet.",
         "failed": "Absenden fehlgeschlagen. Bitte versuche es später erneut."
+    },
+    "not-found": {
+        "title": "[O.o]",
+        "message-1": "Oh nein! Die Seite, die du gesucht hast, ist nicht hier :(",
+        "message-2": "Vielleicht woanders suchen?"
     }
 }

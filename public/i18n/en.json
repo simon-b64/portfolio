@@ -39,5 +39,10 @@
         },
         "success": "Thank you for reaching out. Your message has been sent successfully.",
         "failed": "Submission failed. Please try again later."
+    },
+    "not-found": {
+        "title": "[O.o]",
+        "message-1": "Oh no! The page you've been looking for is not here :(",
+        "message-2": "Maybe search somewhere else?"
     }
 }
