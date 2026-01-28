@@ -28,9 +28,7 @@ export class BlogView implements OnInit {
     protected readonly faPenToSquare = faPenToSquare;
     protected readonly blogPosts = signal<BlogPost[]>([]);
 
-    private readonly entries = [
-        "2026_01_19"
-    ];
+    private readonly entries = [];
 
     constructor(
         private httpClient: HttpClient

@@ -3,7 +3,6 @@ import { HomeView } from './view/home/home';
 import { NotFoundView } from './view/not-found/not-found';
 import { BlogView } from './view/blog/blog';
 import { ContactView } from './view/contact/contact';
-import { BlogEntryView } from './view/blog-entry/blog-entry';
 
 export const routes: Routes = [
     {
@@ -20,11 +19,6 @@ export const routes: Routes = [
                 title: 'Blog | Simon Buchinger',
                 pathMatch: "full",
                 component: BlogView
-            },
-            {
-                path: ':id',
-                title: 'Blog Entry | Simon Buchinger',
-                component: BlogEntryView
             }
         ]
     },
