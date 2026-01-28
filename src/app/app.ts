@@ -13,9 +13,13 @@ export class App {
     private translateService = inject(TranslateService);
 
     constructor() {
-        this.translateService.addLangs(['de', 'en']);
+        const supportedLangs = ['de', 'en'];
+        this.translateService.addLangs(supportedLangs);
         this.translateService.setFallbackLang('en');
-        this.translateService.use('en');
+
+        const browserLang = this.translateService.getBrowserLang() ?? '';
+        const langToUse = supportedLangs.includes(browserLang) ? browserLang : 'en';
+        this.translateService.use(langToUse);
     }
 
 }
