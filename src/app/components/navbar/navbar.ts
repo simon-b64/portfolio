@@ -16,6 +16,7 @@ export class Navbar {
     private translateService = inject(TranslateService);
 
     private currentLanguage = signal(this.translateService.getCurrentLang());
+    private menuOpen = signal(false);
 
     protected alternativeLanguage = computed(() => {
         return this.currentLanguage() === 'en' ? 'DE' : 'EN';
@@ -25,6 +26,16 @@ export class Navbar {
         const newLang = this.currentLanguage() === 'en' ? 'de' : 'en';
         this.translateService.use(newLang);
         this.currentLanguage.set(newLang);
+    }
+
+    protected isMenuOpen = computed(() => this.menuOpen());
+
+    toggleMenu() {
+        this.menuOpen.update((value) => !value);
+    }
+
+    closeMenu() {
+        this.menuOpen.set(false);
     }
 
 }

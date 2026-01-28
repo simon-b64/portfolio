@@ -1,12 +1,25 @@
 <nav>
     <div class="nav-settings">
         <button class="btn" (click)="switchLanguage()">{{ alternativeLanguage() }}</button>
+        <button
+            class="btn nav-toggle"
+            type="button"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="isMenuOpen()"
+            aria-controls="primary-navigation"
+        >
+            Menu
+        </button>
     </div>
-    <div class="nav-links">
-        <a class="link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ 'nav.home' | translate }}</a>
-        <a class="link" routerLink="cv" routerLinkActive="active">{{ 'nav.cv' | translate }}</a>
-        <a class="link" routerLink="blog" routerLinkActive="active">{{ 'nav.blog' | translate }}</a>
-        <a class="link" href="https://github.com/simon-b64" routerLinkActive="active">{{ 'nav.projects' | translate }}</a>
-        <a class="link" routerLink="contact" routerLinkActive="active">{{ 'nav.contact' | translate }}</a>
+    <div
+        id="primary-navigation"
+        class="nav-links"
+        [class.is-open]="isMenuOpen()"
+    >
+        <a class="link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
+        <a class="link" routerLink="cv" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.cv' | translate }}</a>
+        <a class="link" routerLink="blog" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.blog' | translate }}</a>
+        <a class="link" href="https://github.com/simon-b64" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.projects' | translate }}</a>
+        <a class="link" routerLink="contact" routerLinkActive="active" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
     </div>
 </nav>
